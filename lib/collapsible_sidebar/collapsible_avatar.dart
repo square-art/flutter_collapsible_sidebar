@@ -24,7 +24,7 @@ class CollapsibleAvatar extends StatelessWidget {
         borderRadius: BorderRadius.circular(avatarSize),
         color: backgroundColor,
       ),
-      child: avatarImg != null ? _avatar : _initials,
+      child: avatarImg != null ? _avatarWidget : _initials,
     );
   }
 
@@ -37,6 +37,9 @@ class CollapsibleAvatar extends StatelessWidget {
           height: avatarSize,
           width: avatarSize,
         ));
+  }
+  Widget get _avatarWidget {
+    return avatarImg;
   }
 
   Widget get _initials {
